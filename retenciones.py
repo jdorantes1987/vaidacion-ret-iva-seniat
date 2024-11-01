@@ -18,4 +18,4 @@ class RetencionesIVA:
             
 if __name__ == '__main__':
     load_dotenv()
-    print(RetencionesIVA('DPANA_A').retenciones_clientes().to_string())
+    print(RetencionesIVA('DPANA_A').retenciones_clientes())
