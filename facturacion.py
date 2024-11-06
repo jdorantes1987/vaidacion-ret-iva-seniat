@@ -129,6 +129,7 @@ class FacturaVentasConsultas:
         cruce_data = self.cruce_data_retenciones_iva_profit_seniat(fecha_ini=fecha_ini, 
                                                                    fecha_fin=fecha_fin)[['Rif Agente Retención', 
                                                                                          'Agente Retención',
+                                                                                         'Nro.Documento',                
                                                                                          'Nro. Control Documento',
                                                                                          'Fecha Documento',
                                                                                          'fec_emis',
@@ -146,5 +147,5 @@ if __name__ == '__main__':
     FacturaVentasConsultas(conexion, empresa=empresa).diferencias_cruce(fecha_ini='20240101', 
                                                                         fecha_fin='20241031').to_excel('diferencias_cruce.xlsx')
     
-    #FacturaVentasConsultas(conexion, empresa=empresa).retenciones_declaradas_sin_cruzar_en_profit(fecha_ini='20240101', 
-    #                                                                                              fecha_fin='20241031').to_excel('retenciones_declaradas_sin_cruzar_en_profit.xlsx')
+    FacturaVentasConsultas(conexion, empresa=empresa).retenciones_declaradas_sin_cruzar_en_profit(fecha_ini='20240101', 
+                                                                                                  fecha_fin='20241031').to_excel('retenciones_declaradas_sin_cruzar_en_profit.xlsx')
